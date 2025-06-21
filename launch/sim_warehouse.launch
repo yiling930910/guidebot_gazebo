@@ -1,0 +1,10 @@
+<launch>
+  <!-- 載入場景 -->
+  <arg name="world" default="$(find guidebot_gazebo)/worlds/warehouse.world"/>
+  <include file="$(find gazebo_ros)/launch/empty_world.launch">
+    <arg name="world_name" value="$(arg world)"/>
+  </include>
+
+  <!-- spawn 你的機器人 -->
+  <include file="$(find guidebot_description)/launch/spawn_robot.launch"/>
+</launch>

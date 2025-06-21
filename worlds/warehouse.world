@@ -1,0 +1,65 @@
+<?xml version="1.0" ?>
+<sdf version="1.6">
+  <world name="warehouse_world">
+
+    <!-- 環境光與地板 -->
+    <include>
+      <uri>model://sun</uri>
+    </include>
+    <include>
+      <uri>model://ground_plane</uri>
+    </include>
+
+    <!-- TurtleBot3 Waffle Pi 
+    <include>
+      <uri>model://turtlebot3_waffle_pi</uri>
+      <name>turtlebot3</name>
+      <pose>0 0 0.01 0 0 0</pose>
+    </include>-->
+
+    <!-- 倉儲貨架排 -->
+    <include>
+      <uri>model://bookshelf</uri>
+      <name>rack1</name>
+      <pose>2 1 0 0 0 0</pose>
+    </include>
+    <include>
+      <uri>model://bookshelf</uri>
+      <name>rack2</name>
+      <pose>2 3 0 0 0 0</pose>
+    </include>
+    <include>
+      <uri>model://bookshelf</uri>
+      <name>rack3</name>
+      <pose>2 5 0 0 0 0</pose>
+    </include>
+
+    <!-- 貨物（紙箱） -->
+    <include>
+      <uri>model://cardboard_box_01</uri>
+      <name>box1</name>
+      <pose>3.5 1.5 0 0 0 0</pose>
+    </include>
+    <include>
+      <uri>model://cardboard_box_01</uri>
+      <name>box2</name>
+      <pose>3.5 3.5 0 0 0 0</pose>
+    </include>
+    <include>
+      <uri>model://cardboard_box_01</uri>
+      <name>box3</name>
+      <pose>3.5 5.5 0 0 0 0</pose>
+    </include>
+
+    <!-- 場景邊界（使用 construction_barrel 當臨時障礙） -->
+    <include>
+      <uri>model://construction_barrel</uri>
+      <pose>0 6 0 0 0 0</pose>
+    </include>
+    <include>
+      <uri>model://construction_barrel</uri>
+      <pose>4 6 0 0 0 0</pose>
+    </include>
+
+  </world>
+</sdf>
